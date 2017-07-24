@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 3dfb24cd1d19dcd41a7773b365fae3d8
-timeCreated: 1500924421
+guid: 1f1de8fb81d51984d8d671f7c1537d80
+timeCreated: 1500927268
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - laser: {fileID: 129322, guid: 71b702039af0cb1488d6292c814a7061, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

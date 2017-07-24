@@ -11,7 +11,7 @@ public class EnemySpawner : MonoBehaviour {
     private float maxx;
 	// Use this for initialization
 	void Start () {
-        Velocity = Vector3.left * Speed;
+        Velocity = Vector3.left;
 
         float distance = transform.position.z - Camera.main.transform.position.z;
         Vector3 leftmost = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distance));
@@ -33,11 +33,11 @@ public class EnemySpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
-        if ((transform.position + Velocity).x  < minx || (transform.position + Velocity).x  > maxx) {
+        if (((transform.position + Velocity * Speed ).x  < minx && Velocity == Vector3.left)|| ((transform.position + Velocity * Speed).x  > maxx && Velocity == Vector3.right)) {
             Velocity = -Velocity;
             
         }
-        transform.position += Velocity;
+        transform.position += Velocity * Speed;
 
     }
 }

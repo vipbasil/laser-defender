@@ -76,6 +76,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
+    <Compile Include="Assets\entities\Enemies\Enemy.cs" />
+    <Compile Include="Assets\entities\Player\LaserScript.cs" />
     <Compile Include="Assets\entities\Player\PlayerController.cs" />
     <Compile Include="Assets\entities\Spawner\EnemySpawner.cs" />
     <Compile Include="Assets\entities\Spawner\position.cs" />
