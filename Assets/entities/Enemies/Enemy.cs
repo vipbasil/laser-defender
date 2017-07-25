@@ -21,15 +21,14 @@ public class Enemy : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
- 
-        if (col.gameObject.tag == "PlayerLaser") {
+         
             HP -= col.gameObject.GetComponent<LaserScript>().Damage;
             print(HP);
             Destroy(col.gameObject);
             if (HP <= 0) {
                 Destroy(gameObject);
             }
-        }
+      
     }
     // Update is called once per frame
     void Update () {
