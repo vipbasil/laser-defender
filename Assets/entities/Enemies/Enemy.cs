@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
     public int MaxHP = 100;
     private float HP ;
 	public GameObject laser;
+    public GameObject explosion;
 	public float ShootingRate = 2.0f;
 	public float DeltaShootingRate = 0.2f;
-	private float waitTime;
+    public static int killed = 0;
+    private float waitTime;
 	private float timer;
     // Use this for initialization
 	void SetTimer(){
@@ -16,6 +19,7 @@ public class Enemy : MonoBehaviour {
 	}
 	void Start () {
         HP = (float)MaxHP;
+        explosion = GameObject.Find("Explosion");
 		SetTimer ();
 	}
 
@@ -26,7 +30,10 @@ public class Enemy : MonoBehaviour {
             print(HP);
             Destroy(col.gameObject);
             if (HP <= 0) {
+                killed++;
+                explosion.GetComponent<AudioSource>().Play();
                 Destroy(gameObject);
+                
             }
       
     }
